@@ -1,0 +1,99 @@
+---
+
+---
+
+@import 'variables';
+
+body, html {
+  font-family: $font-family;
+  font-size: $remBase;
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+body {
+  border-top: 0.5 * $bu solid $yellow;
+  color: $gray;
+}
+
+.container {
+  width: 50%;
+  margin:0 auto;
+}
+
+.Header {
+  padding: $bu * 2;
+  border-bottom: 2px solid $light_gray;
+  display: flex;
+  align-items: center;
+
+  &__nav {
+    margin: 0;
+    margin-left: auto;
+    list-style-type: none;
+    padding: 0;
+    font-size: $baseFontSize;
+    display: flex;
+
+    &-item {
+      padding: 0 $bu;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.emoji {
+  margin-right: 0.5*$bu;
+}
+
+p {
+  font-size: $baseFontSize;
+  margin-top:0;
+}
+
+small {
+  font-size: $small;
+}
+
+h1 {
+  font-size: $h1;
+  margin: 0;
+}
+
+h2 {
+  font-weight: normal;;
+  font-size: $h2;
+  line-height: $h2 * 1.75;
+}
+
+.text-muted {
+  color: $muted;
+}
+
+.text-center {
+  text-align: center;
+}
+
+a, a:visited {
+  color: $link-color;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 1px solid $blue;
+}
+
+.Bio {
+  padding: 0 $bu * 2;
+}
+
+.footer {
+  text-align: center;
+  padding:$bu 0;
+  border-top: 2px solid $light_gray;
+  color: $muted;
+}

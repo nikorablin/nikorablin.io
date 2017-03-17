@@ -1,0 +1,24 @@
+// basic units
+$remBase: 10px;
+$bu: 1rem;
+
+
+// typography
+$baseFontSize: 1.6 * $bu;
+$h1: $baseFontSize * 2.4;
+$h2: $baseFontSize * 1.2;
+$small: $baseFontSize * 0.8;
+$font-family: 'Roboto', sans-serif;
+
+// colors
+$blue: #0366d6;
+$red: #EF476F;
+$yellow: #FFD166;
+$green: #06D6A0;
+$dark: #073B4C;
+$gray: #333;
+$muted: lighten($gray, 40%);
+$light_gray: lighten($gray, 70%);
+
+$link-color: $blue;
+$text-color: $gray;

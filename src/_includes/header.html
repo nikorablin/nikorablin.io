@@ -1,0 +1,12 @@
+<div class="Header">
+  <h1 class="Header__name">{{ site.title }}</h1>
+  <ul class="Header__nav">
+    {% for item in site.nav %}
+      {% if item.href contains 'http' %}
+         <li class="Header__nav-item"><a target="_blank" href="{{ item.href }}">{{ item.title }}</a></li>
+      {% else %}
+         <li class="Header__nav-item"><a href="{{ item.href | relative_url }}">{{ item.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
