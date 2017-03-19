@@ -22,6 +22,12 @@ body {
   margin:0 auto;
 }
 
+@media (max-width:768px)  {
+  .container {
+    width: 90%;
+  }
+}
+
 .Header {
   padding: $bu * 2;
   border-bottom: 2px solid $light_gray;
@@ -67,7 +73,20 @@ h1 {
 h2 {
   font-weight: normal;;
   font-size: $h2;
-  line-height: $h2 * 1.75;
+  line-height: $h2 * 1.3;
+}
+
+h3 {
+  font-size: $h3;
+  line-height: $h3 * 1.2;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+h4 {
+  font-size: $h4;
+  margin: 0;
+  font-weight: normal;
 }
 
 .text-muted {
@@ -96,4 +115,88 @@ a:hover {
   padding:$bu 0;
   border-top: 2px solid $light_gray;
   color: $muted;
+}
+
+.CV {
+  &__header {
+    padding: 2*$bu 0 $bu;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid $light_gray;
+  }
+
+  &__name {
+    margin: 0;
+    line-height: $h1;
+  }
+
+  &__tagline {
+    margin: 0;
+    color: $muted;
+  }
+
+  &__contact-info {
+    margin-left: auto;
+    font-size: $baseFontSize;
+    color: $muted;
+    list-style: none;
+    &-type {
+      width: $bu*2;
+      display: inline-block;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    padding-left: 2*$bu;
+    font-size: $baseFontSize;
+    &-item {
+      padding: 0.25*$bu 0;
+    }
+  }
+
+  &__section {
+    display: flex;
+    &-header {
+      width: 25%;
+      padding-right: $bu;
+      line-height: $h2;
+    }
+
+    &-content {
+      padding-left: $bu;
+      &--flex {
+        flex: 1;
+        display: flex;
+      }
+      &-section:first-child {
+        padding-right: $bu * 3;
+      }
+      &-section:last-child {
+        padding-right: $bu * 3;
+      }
+    }
+
+    &-link {
+      color: $gray !important;
+      &:hover {
+        border-color: $light_gray !important;
+      }
+    }
+  }
+}
+
+@media (max-width:768px)  {
+  .CV__section-header {
+    width: 35%;
+  }
+
+  .hide-xs {
+    display: none;
+  }
+
+  .Header__nav {
+    display: inline;
+  }
 }
